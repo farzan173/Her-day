@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thank You</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #ffebf0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    h1 {
+      color: #ff4081;
+    }
+    button {
+      padding: 1rem 2rem;
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      border-radius: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Thank You for Visiting 💖</h1>
+  <button onclick="restart()">Replay</button>
+
+  <script>
+    function restart() {
+      window.location.href = "welcome.html";
+    }
+  </script>
+</body>
+</html>

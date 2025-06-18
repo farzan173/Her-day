@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Message</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }
+    .typewriter {
+      width: 80%;
+      font-size: 1.5rem;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 6s steps(60, end), blink 1s infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 80%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 1rem;
+      background-color: white;
+      color: #ff69b4;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>For <span id="name">You</span></h1>
+  <div class="typewriter" id="message">You are the reason behind so many smiles. You are special, loved, and irreplaceable. Happy Birthday to the best friend forever!</div>
+  <button onclick="go()">Next</button>
+
+  <script>
+    const query = new URLSearchParams(window.location.search);
+    const name = query.get('name') || 'You';
+    document.getElementById('name').textContent = name;
+
+    function go() {
+      window.location.href = "thankyou.html";
+    }
+  </script>
+</body>
+</html>

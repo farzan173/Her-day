@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome</title>
+  <style>
+    body {
+      background: url('https://images.unsplash.com/photo-1603574478956-37e5a3be4f0d') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 5px #000;
+    }
+    input {
+      padding: 1rem;
+      font-size: 1.2rem;
+      border-radius: 1rem;
+      border: none;
+      margin-bottom: 1rem;
+    }
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 1rem;
+      border: none;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Birthday Surprise</h1>
+  <input type="text" id="nameInput" placeholder="Please write your name" />
+  <button onclick="startWish()">Start</button>
+
+  <audio autoplay loop hidden>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function startWish() {
+      const name = document.getElementById('nameInput').value;
+      if (name) {
+        window.location.href = `wish.html?name=${encodeURIComponent(name)}`;
+      } else {
+        alert('Please enter your name!');
+      }
+    }
+  </script>
+</body>
+</html>
